@@ -18,7 +18,7 @@ export class GitSearchService {
   }
 
   getUsers(userName: string): Observable<UserSearch[]> {
-    return this.http.get<UserSearch[]>(this.baseURL + 'users/' + userName );
+    return this.http.get<UserSearch[]>(this.baseURL + 'users/' + userName+ '/users ='+environment.apikey );
 
 
 }
