@@ -1,7 +1,9 @@
 export class UserSearch {
-  constructor(
-       public user: any,
-       public repos: any,
-       public userName: string
-   ) { }
+  login:string;
+  avatar_url:any;
+  followers:number;
+  following:number;
+  repos_url:string;
+
+
 }

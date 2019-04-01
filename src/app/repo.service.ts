@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class RepoService {
+import { Observable } from 'rxjs/Rx';
+import { RepoSearch } from './repo-search';
+import {environment} from '../environments/environment';
+@Injectable()
 
-  constructor() { }
+
+
+export class GithubService {
+
+
+  baseURL: string = 'https://api.github.com';
+  constructor(private http: HttpClient) {
+  }
+
+  getRepos(userName: string): Observable<repos[]> {
+       return this.http.get<repos[]>(this.baseURL + '/users/' + userName + '/repos');
+  }
 }

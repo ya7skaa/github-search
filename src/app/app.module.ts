@@ -8,7 +8,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/http';
 
 @NgModule({
   declarations: [

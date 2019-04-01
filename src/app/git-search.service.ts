@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Rx';
-import { user } from './user';
+import { UserSearch } from './user-search';
 import {environment} from '../environments/environment';
 
 @Injectable()
 
-export class ProfileRequestService {
+export class GitSearchService {
 
 
 
