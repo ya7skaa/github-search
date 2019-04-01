@@ -33,3 +33,121 @@
 
 </mdb-navbar>
 <!--/.Navbar-->
+
+<div class="mb-4" >
+                <!-- Search form -->
+              <input class="form-control" name="userName" type="text" (keyup)='getUsers($event)' [(ngModel)]="userName" placeholder="Search" aria-label="Search">
+
+              </div>
+              <div class="mb-4">
+                           <a target="_blank" class="btn btn-outline-white btn-lg text-info" type="button"  (click)="getUsers()" >Find User
+                             <i class="fas fa-search ml-2 animated wobble infinite"></i>
+                           </a>
+                         </div>
+                         <div class="form-group mb-4">
+                           <a target="_blank" class="btn btn-outline-white btn-lg text-info" type="button" (click)="getRepos()" > Show Repos
+                             <i class="fas fa-search ml-2 animated wobble infinite"></i>
+                           </a>
+                         </div>
+
+
+<!--Section: Main info-->
+    <section class="mt-5 wow fadeIn">
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+          <img src='{{users.avatar_url}}' class="img-fluid z-depth-1-half" alt="">
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+          <!-- card start -->
+          <!-- Card -->
+<div class="card">
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title animated fadeInRight" ><p class="text-info"> G-Tracer Found: {{users.login}}</p></h4>
+    <div *ngIf="loading"> <h3>loading  <i class="fas fa-spinner animated rotateIn infinite "></i></h3></div>
+    <hr>
+    <!-- Text -->
+    <ul class=" card-text list-group list-group-flush">
+        <li class="list-group-item animated fadeInRight"> <i class="fas fa-user-friends"></i> Followers: {{users.followers}}</li>
+
+        <li class="list-group-item animated fadeInRight"> <i class="fas fa-users f0c0"></i> Following: {{users.following}}</li>
+
+        <li class="list-group-item animated fadeInRight"> <i class="fas fa-folder-open"></i> No of public repos: {{users.public_repos}}</li>
+
+
+      </ul>
+  </div>
+  <!-- Card footer -->
+  <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+    <ul class="list-unstyled list-inline font-small">
+
+      <li class="list-inline-item pr-2"><a href="#" class="white-text"><i class="fas fa-user-friends"></i> {{users.followers}}</a></li>
+
+      <li class="list-inline-item pr-2"><a href="#" class="white-text"><i class="fas fa-users f0c0"></i> {{users.following}}</a></li>
+
+      
+    </ul>
+  </div>
+</div>
+<!-- Card -->
+          <!-- card end -->
+          <!-- CTA -->
+          <a target="_blank" href="{{users.html_url}}" class="btn btn-grey btn-md">  Checkout on Github
+            <i class="fas fa-fighter-jet"></i>
+          </a>
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Main info-->
+    <section>
+
+       <h3 class="h3 text-center mb-5 text-info animated fadeInRight">Found Repositories</h3>
+
+       <!--Grid row-->
+       <div class="row wow fadeIn">
+           <div class="col-md-4 card" *ngFor="let repo of repos;">
+
+               <!-- <div class="card"> -->
+                   <!-- Card content -->
+                   <div class="card-body ">
+                     <!-- Title -->
+                     <h4 class="card-title animated fadeInRight" ><p class="text-info">  {{repo.name}}</p></h4>
+                     <hr>
+                     <!-- Text -->
+                     <ul class=" card-text list-group list-group-flush">
+                         <li class="list-group-item animated fadeInRight"> <i class="fas fa-fingerprint"></i> Repo ID: {{repo.id}}</li>
+
+                         <li class="list-group-item animated fadeInRight"> <i class="fas fa-globe-americas"></i> Repo Name: {{repo.name}}</li>
+
+                         <li class="list-group-item animated fadeInRight"> <i class="fas fa-file-signature"></i> Repo Description: {{repo.description}}</li>
+                       </ul>
+                   </div>
+
+                   <!-- Card footer -->
+                   <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                     <ul class="list-unstyled list-inline font-small">
+                         <a target="_blank" href="{{repo.html_url}}" class="btn btn-grey btn-md">  Checkout on Github
+                           <i class="fas fa-fighter-jet"></i>
+                         </a>
+                     </ul>
+                   </div>
+                 <!-- </div> -->
+       </div>
+       </div>
+       <!--/Grid row-->
+
+     </section>
+     <!--Section: Main features & Quick Start-->

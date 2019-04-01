@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 import { Observable } from 'rxjs/Rx';
 import { UserSearch } from './user-search';
@@ -9,14 +9,17 @@ import {environment} from '../environments/environment';
 
 export class GitSearchService {
 
+// users:UserSearch[];
 
 
-  baseURL: string = 'https://api.github.com';
-  constructor(private http: HttpClientModule) {
+
+  baseURL: string = 'https://api.github.com/';
+  constructor(private http: HttpClient) {
   }
 
   getUsers(userName: string): Observable<UserSearch[]> {
-    return this.http.get<UserSearch[]>(this.baseURL + '/users/' + userName);
+    return this.http.get<UserSearch[]>(this.baseURL + 'users/' + userName );
+
 
 }
 
