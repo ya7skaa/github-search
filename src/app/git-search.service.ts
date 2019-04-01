@@ -15,8 +15,8 @@ export class GitSearchService {
   constructor(private http: HttpClient) {
   }
 
-  getUsers(userName: string): Observable<user[]> {
-    return this.http.get<user[]>(this.baseURL + '/users/' + userName);
+  getUsers(userName: string): Observable<UserSearch[]> {
+    return this.http.get<UserSearch[]>(this.baseURL + '/users/' + userName);
 
 }
 

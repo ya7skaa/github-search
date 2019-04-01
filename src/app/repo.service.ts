@@ -8,14 +8,14 @@ import {environment} from '../environments/environment';
 
 
 
-export class GithubService {
+export class RepoService {
 
 
   baseURL: string = 'https://api.github.com';
   constructor(private http: HttpClient) {
   }
 
-  getRepos(userName: string): Observable<repos[]> {
-       return this.http.get<repos[]>(this.baseURL + '/users/' + userName + '/repos');
+  getRepos(userName: string): Observable<RepoSearch[]> {
+       return this.http.get<RepoSearch[]>(this.baseURL + '/users/' + userName + '/repos');
   }
 }

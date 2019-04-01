@@ -7,23 +7,25 @@ import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { SearchFormComponent } from './search-form/search-form.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import {HttpClientModule} from '@angular/http';
+// import { UserProfileComponent } from './user-profile/user-profile.component';
+import {HttpModule} from '@angular/http';
+import { GitSearchService } from './git-search.service';
+import {RepoService} from './repo.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchFormComponent,
-    UserProfileComponent
+    // UserProfileComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
-    HttpClientModule
+    HttpModule
   ],
-  providers: [],
+  providers: [GitSearchService,RepoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
