@@ -5,5 +5,3 @@ export class RepoSearch {
  description: string;
 
 }
-
-}
