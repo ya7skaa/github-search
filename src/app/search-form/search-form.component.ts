@@ -13,7 +13,7 @@ import { UserSearch} from '../user-search';
   providers: [ GitSearchService, RepoService]
 })
 export class SearchFormComponent implements OnInit {
-  userName = 'Yasmin Abdirahman';
+  userName = 'ya7skaa';
   repos:RepoSearch[];
   users:UserSearch[];
 
@@ -44,12 +44,12 @@ export class SearchFormComponent implements OnInit {
 //   return promise;
 // }
 
-// public getRepos(){
-//   this.loading= true;
-//   this.errorMessage= '';
-//
-//   this.repoSearch.getRepos(this.userName).subscribe((response)=>{this.repos=response;},(error)=>{this.errorMessage=error;this.loading=false;},()=>{this.loading=false;})
-// }
+public getRepos(){
+  this.loading= true;
+  this.errorMessage= '';
+
+  this.repoSearch.getRepos(this.userName).subscribe((response)=>{this.repos=response;},(error)=>{this.errorMessage=error;this.loading=false;},()=>{this.loading=false;})
+}
 
 public getUsers(){
   this.loading=true;

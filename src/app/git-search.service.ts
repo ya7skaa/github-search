@@ -9,7 +9,8 @@ import {environment} from '../environments/environment';
 
 export class GitSearchService {
 
-// users:UserSearch[];
+users:UserSearch;
+public userName='ya7skaa';
 
 
 
@@ -18,7 +19,7 @@ export class GitSearchService {
   }
 
   getUsers(userName: string): Observable<UserSearch[]> {
-    return this.http.get<UserSearch[]>(this.baseURL + 'users/' + userName+ '/users ='+environment.apikey );
+    return this.http.get<UserSearch[]>(this.baseURL + 'users/' + userName+ '?access_token ='+environment.apikey );
 
 
 }

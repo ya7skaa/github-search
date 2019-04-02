@@ -10,12 +10,12 @@ import {environment} from '../environments/environment';
 
 export class RepoService {
   repos:RepoSearch
-
+  public userName = 'ya7skaa';
   baseURL: string = 'https://api.github.com/';
   constructor(private http: HttpClient) {
   }
 
   getRepos(userName: string): Observable<RepoSearch[]> {
-       return this.http.get<RepoSearch[]>(this.baseURL + 'users/' + userName + '/repos ='+environment.apikey);
+       return this.http.get<RepoSearch[]>(this.baseURL + 'users/' + userName + '/repos?access_token ='+environment.apikey);
   }
 }
