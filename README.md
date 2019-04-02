@@ -22,7 +22,7 @@ This project was generated with Angular CLI version 7.3.6. This is a  app that a
 
 ## Demo
 To view the page click on the link below:
-*[https://gtracer.netlify.com/](*)
+*[https://gitsearchapp.netlify.com/](*)
 
 ## Technologies Used
 - Angular CLI
