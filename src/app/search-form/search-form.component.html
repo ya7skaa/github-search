@@ -36,10 +36,10 @@
 
 
 
-<form class="form-inline md-form mr-auto mb-4">
+<form id="search" class="form-inline  md-form mr-auto mb-4 " >
   <input class="form-control mr-sm-2" type="text" (keyup)='getUsers()' [(ngModel)]='userName' name='userName' placeholder="Search" aria-label="Search">
-  <button mdbBtn size="sm" color="elegant" rounded="true" class="my-0 waves-light" (click)='getUsers()'  mdbWavesEffect type="submit">Search Users</button>
-  <button mdbBtn size="sm" color="elegant" rounded="true" class="my-0 waves-light" (click)='getRepos()'  mdbWavesEffect type="submit">Search Repo</button>
+  <button mdbBtn size="sm" color="darkblue" rounded="true" class="my-0 waves-light" (click)='getUsers()'  mdbWavesEffect type="submit">Search Users</button>
+  <button mdbBtn size="sm" color="darkblue" rounded="true" class="my-0 waves-light" (click)='getRepos()'  mdbWavesEffect type="submit">Search Repo</button>
 </form>
 
 
@@ -93,8 +93,8 @@
 <!-- Card -->
          <!-- card end -->
          <!-- CTA -->
-         <a target="_blank" href="{{users.html_url}}" class="btn btn-grey btn-md">  Checkout on Github
-           <i class="fas fa-fighter-jet"></i>
+         <a target="_blank" href="{{users.html_url}}" class="navbar-dark cyan btn-md">   Github Link
+
          </a>
        </div>
        <!--Grid column-->
@@ -107,32 +107,32 @@
 
    <section >
 
-      <h3 class="h3 text-center mb-5  ">Found Repositories</h3>
+      <h3 class="h3 text-center mb-5  ">Repositories</h3>
 
       <!--Grid row-->
-      <div class="row wow fadeIn">
+      <div class="row ">
           <div class="col-md-4 card" *ngFor="let repo of repos;">
 
               <!-- <div class="card"> -->
                   <!-- Card content -->
                   <div class="card-body ">
                     <!-- Title -->
-                    <h4 class="card-title animated fadeInRight" ><p class="text-default">  {{repo.name}}</p></h4>
+                    <h4 class="card-title" ><p class="text-default">  {{repo.name}}</p></h4>
                     <hr>
                     <!-- Text -->
                     <ul class=" card-text list-group list-group-flush">
-                        <li class="list-group-item animated fadeInRight"> <i class="fas fa-fingerprint"></i> Repo ID: {{repo.id}}</li>
+                        <li class="list-group-item "> <i class="fas fa-fingerprint"></i> Repo ID: {{repo.id}}</li>
 
-                        <li class="list-group-item animated fadeInRight"> <i class="fas fa-globe-americas"></i> Repo Name: {{repo.name}}</li>
+                        <li class="list-group-item "> <i class="fas fa-globe-americas"></i> Repo Name: {{repo.name}}</li>
 
-                        <li class="list-group-item animated fadeInRight"> <i class="fas fa-file-signature"></i> Repo Description: {{repo.description}}</li>
+                        <li class="list-group-item "> <i class="fas fa-file-signature"></i> Repo Description: {{repo.description}}</li>
                       </ul>
                   </div>
 
                   <!-- Card footer -->
-                  <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                  <div class="rounded-bottom navbar-dark cyan text-center pt-3">
                     <ul class="list-unstyled list-inline font-small">
-                        <a target="_blank" href="{{repo.html_url}}" class="btn btn-grey btn-md">   Github Link
+                        <a target="_blank" href="{{repo.html_url}}" class="btn  btn-md">   Github Link
 
                         </a>
                     </ul>
