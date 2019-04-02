@@ -30,3 +30,14 @@ To view the page click on the link below:
 - html
 - scss
 - Typescript
+## Known Bugs
+- There are no known bugs currently. The page works as expected.Incase of any Bugs reach out to me in the email below.
+
+## Support and Contact Details
+- For any comments, suggestions, feedback or inquiries, contact me via email: `yaazzmineoz@gmail.com`
+
+
+- Make contributions to the code.
+
+## License
+- This project is licensed under the MIT Open Source license Copyright (c) 2019. [Yasmin Abdirahman](https://github.com/ya7skaa)
