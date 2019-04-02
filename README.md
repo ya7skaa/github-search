@@ -6,3 +6,10 @@ Yasmin Abdirahman [8:00 AM]
 ## Description
 -
 This project was generated with Angular CLI version 7.3.6. This is a  app that allows users to search a github username and the users repositories will be displayed alongside his profile details.
+## Behaviour Driven Development(BDD)
+
+
+| Input                        | Ouput                                                                                            |
+|--------------------------    |----------------------------------------------------------------------------------------------    |
+| Click search user    | Users details will be displayed                  |
+| Click Search repos         | User Repositories are displayed             |
