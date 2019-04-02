@@ -1,6 +1,6 @@
 Yasmin Abdirahman [8:00 AM]
-# GitHub Tracker
-#### GitHub Tracker, April 2nd 2019
+# GitHub Search
+#### GitHub Search, April 2nd 2019
 #### By **Yasmin Abdirahman**
 
 ## Description
